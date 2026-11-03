@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>MatkaExch - Official App Download</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        darkblue: {
+                            900: '#040814',
+                            800: '#080E21',
+                            700: '#101A38',
+                            600: '#1A2952',
+                        },
+                        gold: {
+                            500: '#D4AF37',
+                            400: '#F5E6B0',
+                            600: '#AA8C2C',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #02040a;
+            color: #ffffff;
+            touch-action: manipulation;
+        }
+        .app-container {
+            max-width: 430px;
+            min-height: 100vh;
+            background: radial-gradient(circle at center, #101A38 0%, #060B18 100%);
+            box-shadow: 0 0 40px rgba(0, 0, 0, 0.8);
+        }
+        .glow-gold {
+            box-shadow: 0 0 35px rgba(212, 175, 55, 0.45);
+        }
+        .glow-btn {
+            box-shadow: 0 0 25px rgba(212, 175, 55, 0.5);
+            transition: all 0.2s ease;
+        }
+        .glow-btn:active {
+            transform: scale(0.97);
+            box-shadow: 0 0 15px rgba(212, 175, 55, 0.8);
+        }
+        .pulse-dot {
+            animation: pulseGlow 2s infinite;
+        }
+        @keyframes pulseGlow {
+            0% { transform: scale(0.95); opacity: 0.8; }
+            50% { transform: scale(1.05); opacity: 1; }
+            100% { transform: scale(0.95); opacity: 0.8; }
+        }
+    </style>
+</head>
+<body class="h-full flex items-center justify-center m-0 p-0 overflow-x-hidden">
+
+    <!-- Mobile Frame Container -->
+    <div class="app-container w-full relative flex flex-col justify-between mx-auto overflow-hidden border-x border-gold-500/10">
+
+        <!-- Top Header Bar -->
+        <header class="w-full py-2.5 px-4 bg-darkblue-800/95 backdrop-blur-md border-b border-gold-500/20 text-center text-xs text-gold-400 font-semibold tracking-wide flex items-center justify-center space-x-2">
+            <i class="fa-solid fa-crown text-gold-500"></i>
+            <span>India's Trusted Gaming & Exchange App</span>
+        </header>
+
+        <!-- Main Content Area -->
+        <main class="flex-1 flex flex-col items-center justify-center px-5 py-6 text-center">
+            
+            <!-- Logo Container with exact user uploaded logo -->
+            <div class="relative mb-3">
+                <div class="absolute -inset-2.5 rounded-full bg-gradient-to-r from-gold-500 via-gold-400 to-gold-600 opacity-70 blur-md"></div>
+                <div class="relative w-36 h-36 rounded-full p-1 bg-gradient-to-b from-gold-400 via-gold-500 to-darkblue-900 glow-gold mx-auto overflow-hidden shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=400&auto=format&fit=crop" 
+                         onerror="this.src='https://placehold.co/400x400/060b18/d4af37?text=MatkaExch';"
+                         alt="MatkaExch Logo" 
+                         class="w-full h-full object-cover rounded-full border-2 border-darkblue-900">
+                </div>
+            </div>
+
+            <!-- Live Badge placed directly below logo -->
+            <div class="inline-flex items-center space-x-2 px-3.5 py-1 rounded-full bg-darkblue-700/90 border border-gold-500/40 text-gold-400 text-xs font-semibold mb-4 pulse-dot shadow-md">
+                <span class="w-2 h-2 rounded-full bg-red-500 animate-ping inline-block"></span>
+                <span class="w-1.5 h-1.5 rounded-full bg-red-500 inline-block -ml-3.5 mr-0.5"></span>
+                <span>LIVE NOW</span>
+            </div>
+
+            <!-- Brand Name -->
+            <h1 class="text-3xl font-extrabold tracking-tight text-white mb-1.5 uppercase">
+                Matka<span class="text-transparent bg-clip-text bg-gradient-to-r from-gold-400 to-gold-600">Exch</span>
+            </h1>
+
+            <!-- Active Members Counter -->
+            <div class="flex items-center justify-center space-x-1.5 text-gray-300 text-sm mb-5 font-medium">
+                <span id="memberCount" class="font-bold text-gold-400 text-base">78,412+</span> active members
+            </div>
+
+            <!-- Highlights Badges -->
+            <div class="grid grid-cols-2 gap-3 w-full mb-5 text-xs font-semibold">
+                <div class="flex items-center justify-center space-x-2 text-gold-400 bg-darkblue-800/80 py-2.5 px-3 rounded-xl border border-gold-500/20 shadow-sm">
+                    <i class="fa-solid fa-circle-check text-green-400 text-sm"></i>
+                    <span>100% Free</span>
+                </div>
+                <div class="flex items-center justify-center space-x-2 text-gold-400 bg-darkblue-800/80 py-2.5 px-3 rounded-xl border border-gold-500/20 shadow-sm">
+                    <i class="fa-solid fa-bolt text-yellow-400 text-sm"></i>
+                    <span>Instant Access</span>
+                </div>
+            </div>
+
+            <!-- Offer Timer Box -->
+            <div class="w-full bg-darkblue-800/90 border border-gold-500/30 rounded-2xl py-3 px-4 mb-6 flex items-center justify-between shadow-inner">
+                <span class="text-xs text-gray-300 font-medium tracking-wide uppercase">Offer Ends In:</span>
+                <div id="countdown" class="text-lg font-mono font-bold text-gold-400 tracking-wider">
+                    07:17
+                </div>
+            </div>
+
+            <!-- Download APK Button -->
+            <a href="#download" onclick="triggerDownload(event)" class="w-full group relative inline-flex items-center justify-center px-6 py-3.5 font-bold text-darkblue-900 uppercase tracking-wider rounded-2xl bg-gradient-to-r from-gold-500 via-gold-400 to-gold-600 glow-btn overflow-hidden">
+                <div class="flex items-center space-x-2.5 text-darkblue-900">
+                    <i class="fa-brands fa-android text-2xl"></i>
+                    <span class="text-base">Download APK</span>
+                </div>
+            </a>
+            
+            <p class="text-[11px] text-gray-400 mt-2.5">Compatible with Android 6.0 & above</p>
+
+        </main>
+
+        <!-- Footer -->
+        <footer class="w-full py-3 text-center text-[11px] text-gray-500 border-t border-darkblue-700/40 bg-darkblue-900/60">
+            &copy; 2026 MatkaExch. All rights reserved. 18+ Play Responsibly.
+        </footer>
+
+    </div>
+
+    <!-- Custom Notification Popup -->
+    <div id="toast" class="fixed bottom-6 left-1/2 transform -translate-x-1/2 translate-y-20 opacity-0 transition-all duration-300 bg-darkblue-700 border border-gold-500 text-white px-4 py-2.5 rounded-xl shadow-2xl flex items-center space-x-3 z-50 pointer-events-none text-xs">
+        <i class="fa-solid fa-circle-exclamation text-gold-400 text-base"></i>
+        <span id="toastMessage" class="font-medium">Downloading MatkaExch Official APK...</span>
+    </div>
+
+    <!-- JavaScript for Interactivity -->
+    <script>
+        // Countdown Timer
+        let totalSeconds = 7 * 60 + 17;
+        const timerDisplay = document.getElementById('countdown');
+
+        setInterval(() => {
+            if (totalSeconds > 0) {
+                totalSeconds--;
+                let minutes = Math.floor(totalSeconds / 60);
+                let seconds = totalSeconds % 60;
+                timerDisplay.textContent = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+            }
+        }, 1000);
+
+        // Member Count Increment
+        let members = 78412;
+        setInterval(() => {
+            members += Math.floor(Math.random() * 2);
+            document.getElementById('memberCount').textContent = members.toLocaleString() + '+';
+        }, 4000);
+
+        // Download trigger with Toast popup
+        function triggerDownload(e) {
+            e.preventDefault();
+            const toast = document.getElementById('toast');
+            toast.classList.remove('translate-y-20', 'opacity-0');
+            toast.classList.add('translate-y-0', 'opacity-100');
+            
+            setTimeout(() => {
+                toast.classList.remove('translate-y-0', 'opacity-100');
+                toast.classList.add('translate-y-20', 'opacity-0');
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
